@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3883f75a-1dab-4951-81d0-d4ae39ac66b9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/Elements/HpBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Code/StaticData/LevelStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Data/EnemySpawnerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawnMarker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/PlayerSpawnMarker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/LevelStaticDataEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/Assets/AssetAddress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/PlayerSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/Factory/IGameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/MarkerGizmos.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Camera/CameraMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Camera/FollowingCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/LookAtCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/CameraLogic/FollowingCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Data/WindowConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/StaticData/WindowStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/StaticData/IStaticDataService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/WindowService/WindowServiec.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/WindowService/WindowService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/WindowService/IWindowService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Services/StaticData/StaticDataService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/IHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/HpBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/ActorUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/LoadLevelState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameOverState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/MenuWindow/MenuWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/IUIFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/UIFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/LoseWindow/LoseWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/MenuState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/TriggerObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/StaticData/EnemyStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/CheckAttackRange.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Extensions/DataExtensions/DataExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyMovement.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2RxgNogTooRfQouvRAowLh74L6g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3883f75a-1dab-4951-81d0-d4ae39ac66b9" name="Default Changelist" comment="" />
+      <created>1688197108531</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688197108531</updated>
+      <workItem from="1688197114274" duration="6319000" />
+      <workItem from="1688278476540" duration="11709000" />
+      <workItem from="1688456980992" duration="6178000" />
+      <workItem from="1688468742356" duration="2564000" />
+      <workItem from="1688495666242" duration="5280000" />
+      <workItem from="1688574045120" duration="9469000" />
+      <workItem from="1688622321019" duration="11869000" />
+      <workItem from="1688639752933" duration="4847000" />
+      <workItem from="1688663379719" duration="4747000" />
+      <workItem from="1688707569958" duration="920000" />
+      <workItem from="1688725853336" duration="4415000" />
+      <workItem from="1688753673762" duration="5499000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="788" y="194" key="RiderGenerateDialog" timestamp="1688666409642">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="788" y="194" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1688666409642" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1688286584815">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1688286584815" />
+    <state x="523" y="0" width="1413" height="1027" key="dock-window-1" timestamp="1688463362871">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="523" y="0" width="1413" height="1027" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1688463362871" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1688759532138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1688759532138" />
+  </component>
+</project>

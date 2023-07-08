@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  m_GroupName: Default
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 2461c409651d73346bb535688d3d6745
+  m_SerializeEntries:
+  - m_GUID: d954c262f71f90945b81ba54f90dbe9e
+    m_Address: Player
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1f620dddf14ddf64f94ca43ab3635c2d
+    m_Address: Hud
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ce9cc35f3e2b8c747a52182b7f1031dd
+    m_Address: DefaultEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7b97f0b33769fbf4ca8ad3edceef98df
+    m_Address: EnemySpawner
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d09595b6c19f6c8459b830ca0c133ca2
+    m_Address: PlayerSpawner
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd2182d224b90c343bd53a90677d5d63
+    m_Address: UIRoot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c2018b811f4755147b4ad9721f4e75b5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a0d6e7e67b4975e4d96279c1ec55261c, type: 2}
+    - {fileID: 11400000, guid: 9cc2b246110e943439104a1b05392a0a, type: 2}
