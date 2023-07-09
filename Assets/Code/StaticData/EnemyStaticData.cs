@@ -13,6 +13,7 @@ namespace Code.StaticData
 		[SerializeField] private int damage;
 		[SerializeField] private float attackCooldown;
 		[SerializeField] private float attackDistance;
+		[SerializeField] private float _cleavage;
 		[SerializeField] private float moveSpeed;
 		public AssetReferenceGameObject AssetReferenceGameObject => assetReferenceGameObject;
 		public EnemyType Type => type;
@@ -20,6 +21,7 @@ namespace Code.StaticData
 		public int Damage => damage;
 		public float AttackCooldown => attackCooldown;
 		public float AttackDistance => attackDistance;
+		public float Cleavage => _cleavage;
 		public float MoveSpeed => moveSpeed;
 	}
 }

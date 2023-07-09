@@ -44,7 +44,7 @@ namespace Code.Infrastructure.Factory
 
 			enemy.GetComponent<EnemyMovement>().Construct(enemyStaticData.MoveSpeed, _playerGameObject.transform);
 			enemy.GetComponent<EnemyHealth>().Construct(enemyStaticData.Health, enemyStaticData.Health);
-			enemy.GetComponent<EnemyAttack>().Construct(_playerGameObject.transform, enemyStaticData.Damage, enemyStaticData.AttackCooldown, enemyStaticData.AttackDistance);
+			enemy.GetComponent<EnemyAttack>().Construct(_playerGameObject.transform, enemyStaticData.Damage, enemyStaticData.AttackCooldown, enemyStaticData.AttackDistance, enemyStaticData.Cleavage);
 			
 			return enemy;
 		}

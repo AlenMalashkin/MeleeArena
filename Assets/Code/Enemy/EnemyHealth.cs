@@ -6,6 +6,8 @@ namespace Code.Enemy
 {
 	public class EnemyHealth : MonoBehaviour, IHealth
 	{
+		[SerializeField] private EnemyAnimator animator;
+		
 		public event Action<int> HealthChanged;
 
 		private int _maxEnemyHealth;
@@ -36,6 +38,8 @@ namespace Code.Enemy
 		{
 			if (_currentEnemyHealth <= 0)
 				return;
+			
+			animator.PlayHit();
 
 			CurrentHealth -= damage;
 		}

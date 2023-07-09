@@ -13,6 +13,8 @@ namespace Code.Enemy
 		{
 			triggerObserver.TriggerEntered += OnTriggerEntered;
 			triggerObserver.TriggerExited += OnTriggerExited;
+			
+			enemyAttack.DisableAttack();
 		}
 
 		private void OnDisable()

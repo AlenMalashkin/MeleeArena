@@ -22,4 +22,5 @@ MonoBehaviour:
   damage: 1
   attackCooldown: 1
   attackDistance: 1
+  _cleavage: 1
   moveSpeed: 5

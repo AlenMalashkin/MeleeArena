@@ -7,6 +7,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2203174783629482025, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a062736b09419504ca1b1fc04b3ca2e7, type: 2}
+    - target: {fileID: 2832831864671376201, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 03ee2a8d311769544ab1f0f73f6bc0b8, type: 3}
+    - target: {fileID: 2832831864671376201, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3eb1033db73eff0499fba0ad81178fcc, type: 2}
+    - target: {fileID: 3290532706429282586, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340879134067040118, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a062736b09419504ca1b1fc04b3ca2e7, type: 2}
+    - target: {fileID: 5406666073446087463, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a062736b09419504ca1b1fc04b3ca2e7, type: 2}
     - target: {fileID: 5783237777474458760, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy
@@ -66,6 +90,9 @@ PrefabInstance:
     - target: {fileID: 6427227727502092398, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
-    m_RemovedComponents: []
+      objectReference: {fileID: -2432090755550338912, guid: 03ee2a8d311769544ab1f0f73f6bc0b8, type: 3}
+    m_RemovedComponents:
+    - {fileID: 6427227727502092398, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+    - {fileID: 5406666073446087463, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+    - {fileID: 2203174783629482025, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
