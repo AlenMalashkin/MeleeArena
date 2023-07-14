@@ -19,6 +19,9 @@ namespace Code.UI.Services.WindowService
 				case WindowType.LoseWindow :
 					_uiFactory.CreateLoseScreen();
 					break;
+				case WindowType.Shop :
+					_uiFactory.CreateShop();
+					break;
 			}
 		}
 	}

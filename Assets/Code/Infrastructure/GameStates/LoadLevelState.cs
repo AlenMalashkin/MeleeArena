@@ -1,15 +1,14 @@
 using System.Threading.Tasks;
 using Code.CameraLogic;
-using Code.Enemy;
 using Code.Infrastructure.Assets;
 using Code.Infrastructure.Factory;
 using Code.Logic;
+using Code.Player;
 using Code.Services.StaticData;
 using Code.StaticData;
 using Code.UI.Elements;
 using Code.UI.LoadingCurtain;
 using Code.UI.Services.Factory;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,8 +24,8 @@ namespace Code.Infrastructure.GameStates
 		private IStaticDataService _staticDataService;
 		private IUIFactory _uiFactory;
 
-		private GameObject _playerGameObject;
-			
+		private GameObject _player;
+
 		public LoadLevelState(IGameStateMachine gameStateMachine, SceneLoader sceneLoader,
 			LoadingCurtain curtain, IGameFactory gameFactory, IAssetProvider assetProvider,
 			IStaticDataService staticDataService, IUIFactory uiFactory)
@@ -53,26 +52,28 @@ namespace Code.Infrastructure.GameStates
 		private async void OnLoaded()
 		{
 			await InitGameWorld();
-			_gameStateMachine.Enter<GameState, GameObject>(_playerGameObject);
+			_gameStateMachine.Enter<GameState>();
 		}
 
 		private async Task<GameObject> InitPlayer(Vector3 at)
 		{
-			return await _gameFactory.CreatePlayer(at);
+			GameObject player = await _gameFactory.CreatePlayer(at);
+			await _gameFactory.CreatePlayerSword(player.GetComponent<PlayerEquipment>().SwordSpawnPoint);
+			player.GetComponent<PlayerDeath>().Construct(_gameStateMachine);
+			return player;
 		}
 
-		private async Task<GameObject> InitHud(IHealth health)
+		private async Task InitHud(GameObject playerGameObject)
 		{
 			GameObject hud = await _gameFactory.CreateHud();
-			hud.GetComponentInChildren<ActorUI>().Construct(health);
-			return hud;
+			hud.GetComponentInChildren<ActorUI>().Construct(playerGameObject.GetComponent<IHealth>());
 		}
 
 		private async Task InitEnemySpawners(LevelStaticData levelStaticData)
 		{
 			foreach (var enemySpawner in levelStaticData.EnemySpawners)
 			{
-				await _gameFactory.CreateSpawner(enemySpawner.EnemyType, enemySpawner.Position);
+				await _gameFactory.CreateSpawner(enemySpawner.EnemyType, enemySpawner.Position, enemySpawner.TimeToRespawn);
 			}
 		}
 
@@ -85,18 +86,44 @@ namespace Code.Infrastructure.GameStates
 		{
 			LevelStaticData levelStaticData = LevelStaticData();
 
-			await InitEnemySpawners(levelStaticData);
-			_playerGameObject = await InitPlayer(levelStaticData.PlayerPositionOnLevel);
+			_player = await InitPlayer(levelStaticData.PlayerPositionOnLevel);
 			await InitUIRoot();
-			await InitHud(_playerGameObject.GetComponent<IHealth>());
+			await InitHud(_player);
+			await InitEnemySpawners(levelStaticData);
 			CameraFollow();
 		}
+
+		/*private void InitGameplayObjectService()
+		{
+			InitGameplayObjects();
+
+			gameResultReporterService.SingleGameplayEntityMap.Add(typeof(Player.Player), playerGameplayEntity);
+			gameResultReporterService.SingleGameplayEntityMap.Add(typeof(Hud), hudGameplayEntity);
+			
+			gameResultReporterService.MultipleGameplayEntitiesMap.Add(typeof(EnemySpawner), _spawnerGameplayObjects);
+			gameResultReporterService.MultipleGameplayEntitiesMap.Add(typeof(Enemy.Enemy), _enemyGameplayObjects);
+		}
+
+		private void InitGameplayObjects()
+		{
+			playerGameplayEntity = _player.GetComponent<IGameplayEntity>();
+			hudGameplayEntity = _hud.GetComponent<IGameplayEntity>();
+
+			_spawnerGameplayObjects = new List<IGameplayEntity>();
+			
+			foreach (var spawner in _enemySpawners)
+			{
+				_spawnerGameplayObjects.Add(spawner.GetComponent<IGameplayEntity>());
+			}
+			
+			_enemyGameplayObjects = new List<IGameplayEntity>();
+		}*/
 
 		private LevelStaticData LevelStaticData()
 			=> _staticDataService.ForLevel(SceneManager.GetActiveScene().name);
 
 		private void CameraFollow()
-			=> Camera.main.GetComponent<FollowingCamera>().Follow(_playerGameObject);
+			=> Camera.main.GetComponent<FollowingCamera>().Follow(_player);
 		
 		private void Cleanup()
 		{

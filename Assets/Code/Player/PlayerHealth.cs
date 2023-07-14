@@ -6,7 +6,9 @@ namespace Code.Player
 {
     public class PlayerHealth : MonoBehaviour, IHealth
     {
-        public event Action<int> HealthChanged;  
+        public event Action<int> HealthChanged;
+
+        [SerializeField] private PlayerAnimator animator;
         
         private int _maxHealth;
         private int _currentHealth;
@@ -31,7 +33,8 @@ namespace Code.Player
         {
             if (_currentHealth <= 0)
                 return;
-            
+
+            animator.PlayHit();
             CurrentHealth -= damage;
         }
     }

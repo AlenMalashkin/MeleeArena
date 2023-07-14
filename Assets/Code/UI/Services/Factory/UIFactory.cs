@@ -3,10 +3,14 @@ using Code.Data;
 using Code.Infrastructure;
 using Code.Infrastructure.Assets;
 using Code.Infrastructure.GameStates;
+using Code.Services.PersistentProgress;
+using Code.Services.SaveLoadService;
 using Code.Services.StaticData;
+using Code.UI.Services.WindowService;
 using Code.UI.Windows;
 using Code.UI.Windows.LoseWindow;
 using Code.UI.Windows.MenuWindow;
+using Code.UI.Windows.ShopWindow;
 using UnityEngine;
 
 namespace Code.UI.Services.Factory
@@ -40,6 +44,12 @@ namespace Code.UI.Services.Factory
 			WindowConfig config = _staticDataService.ForWindow(WindowType.MenuWindow);
 			MenuWindow menuWindow = Object.Instantiate(config.WindowBase, _uiRoot) as MenuWindow;
 			menuWindow.Construct(_gameStateMachine);
+		}
+
+		public void CreateShop()
+		{
+			WindowConfig config = _staticDataService.ForWindow(WindowType.Shop);
+			Object.Instantiate(config.WindowBase, _uiRoot);
 		}
 
 		public async Task CreateUIRoot()

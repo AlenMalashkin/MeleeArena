@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Code.Infrastructure.Assets;
 using Code.Infrastructure.Factory;
 using Code.Services;
+using Code.Services.GameplayObjectsService;
+using Code.Services.KillCountService;
 using Code.Services.PersistentProgress;
 using Code.Services.SaveLoadService;
 using Code.Services.StaticData;
@@ -25,11 +27,11 @@ namespace Code.Infrastructure.GameStates
 				[typeof(MenuState)] = new MenuState(sceneLoader, loadingCurtain, serviceLocator.Resolve<IUIFactory>()),
 				[typeof(LoadProgressState)] = new LoadProgressState(this, serviceLocator.Resolve<IPersistentProgressService>(), serviceLocator.Resolve<ISaveLoadService>()),
 				[typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, loadingCurtain, serviceLocator.Resolve<IGameFactory>(), serviceLocator.Resolve<IAssetProvider>(), serviceLocator.Resolve<IStaticDataService>(), serviceLocator.Resolve<IUIFactory>()),
-				[typeof(GameState)] = new GameState(this),
-				[typeof(GameOverState)] = new GameOverState(serviceLocator.Resolve<IWindowService>()),
+				[typeof(GameState)] = new GameState(this, serviceLocator.Resolve<IKillCountService>()),
+				[typeof(GameOverState)] = new GameOverState(serviceLocator.Resolve<IWindowService>(), serviceLocator.Resolve<IGameResultReporterService>()),
 			};
 		}
-		
+
 		public void Enter<TState>() where TState : class, IState
 		{
 			IState state = ChangeState<TState>();
@@ -48,7 +50,7 @@ namespace Code.Infrastructure.GameStates
 
 			TState state = GetState<TState>();
 			_currentState = state;
-
+		
 			return state;
 		}
 

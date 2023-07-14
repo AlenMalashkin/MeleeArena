@@ -416,6 +416,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnMarker (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7480189056226636738, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
+      propertyPath: TimeToRespawn
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480189056226636738, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
+      propertyPath: timeToRespawn
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7480189056226636739, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -550,6 +558,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnMarker (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7480189056226636738, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
+      propertyPath: TimeToRespawn
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480189056226636738, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
+      propertyPath: timeToRespawn
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7480189056226636739, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -669,6 +685,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnMarker
       objectReference: {fileID: 0}
+    - target: {fileID: 7480189056226636738, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
+      propertyPath: TimeToRespawn
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480189056226636738, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
+      propertyPath: timeToRespawn
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7480189056226636739, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -713,7 +737,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1113068191041435346, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b97f0b33769fbf4ca8ad3edceef98df, type: 3}
 --- !u!1001 &8909255901885097029
 PrefabInstance:

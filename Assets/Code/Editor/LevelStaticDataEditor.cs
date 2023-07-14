@@ -21,7 +21,7 @@ namespace Code.Editor
 			{
 				levelStaticData.LevelName = SceneManager.GetActiveScene().name;
 				levelStaticData.EnemySpawners = FindObjectsOfType<EnemySpawner>()
-					.Select(x => new EnemySpawnerData(x.Type, x.transform.position))
+					.Select(x => new EnemySpawnerData(x.Type, x.transform.position, x.TimeToRespawn))
 					.ToList();
 				levelStaticData.PlayerPositionOnLevel = FindObjectOfType<PlayerSpawner>().transform.position;
 			}

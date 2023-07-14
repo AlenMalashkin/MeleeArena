@@ -9,7 +9,6 @@ namespace Code.Enemy
 	public class EnemyAttack : MonoBehaviour
 	{
 		[SerializeField] private EnemyAnimator animator;
-		[SerializeField] private NavMeshAgent agent;
 		
 		private Transform _target;
 		private Collider[] _hits  = new Collider[1];
@@ -70,7 +69,7 @@ namespace Code.Enemy
 		private Vector3 StartPosition()
 		{
 			return new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z) +
-				-Vector3.forward * _attackDistance;
+				transform.forward * _attackDistance;
 		}
 
 		private bool CanAttack()
@@ -86,7 +85,6 @@ namespace Code.Enemy
 		private void OnAttack()
 		{
 			PhysicsDebug.DrawDebug(StartPosition(), _cleavage, 1.0f);
-			agent.isStopped = true;
 			if (Hit(out Collider other))
 				other.GetComponent<IHealth>().TakeDamage(_damage);
 		}
@@ -94,7 +92,6 @@ namespace Code.Enemy
 		private void OnAttackEnded()
 		{
 			_attackCooldownTemp = _attackCooldown;
-			agent.isStopped = false;
 			_isAttacking = false;
 		}
 	}

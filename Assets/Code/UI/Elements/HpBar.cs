@@ -11,7 +11,8 @@ namespace Code.UI.Elements
 
         public void SetValue(float currentHp, float maxHp)
         {
-            filler.fillAmount = currentHp / maxHp;
+            if (filler != null)
+                filler.fillAmount = currentHp / maxHp;
         }
     }
 }

@@ -36,7 +36,7 @@ namespace Code.Player
 			}
 			
 			movementVector += Physics.gravity;
-
+			
 			controller.Move(movementVector * moveSpeed * Time.deltaTime);
 		}
 	}

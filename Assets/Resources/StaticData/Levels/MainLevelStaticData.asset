@@ -16,8 +16,11 @@ MonoBehaviour:
   EnemySpawners:
   - EnemyType: 0
     Position: {x: -4.98, y: -3.71, z: 3.44}
+    TimeToRespawn: 15
   - EnemyType: 0
     Position: {x: 3.41, y: -3.64, z: 4.05}
+    TimeToRespawn: 15
   - EnemyType: 0
     Position: {x: -0.19, y: -3.74, z: 6.95}
+    TimeToRespawn: 15
   PlayerPositionOnLevel: {x: -6.85, y: 0, z: -4.07}

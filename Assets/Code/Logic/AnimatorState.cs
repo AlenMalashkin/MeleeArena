@@ -2,10 +2,12 @@
 {
     public enum AnimatorState
     {
-        Unknown,
+        Idle,
         Move,
         Attack,
         Hit,
-        Die
+        Die,
+        Victory,
+        Unknown
     }
 }

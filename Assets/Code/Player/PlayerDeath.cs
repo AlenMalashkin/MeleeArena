@@ -1,16 +1,22 @@
-using System;
+using Code.Infrastructure.GameStates;
+using Code.Logic;
+using Code.Services.GameOverReporterService;
 using UnityEngine;
 
 namespace Code.Player
 {
 	public class PlayerDeath : MonoBehaviour
 	{
-		public event Action PlayerDied;
-		
+		[SerializeField] private PlayerAnimator animator;
 		[SerializeField] private PlayerHealth playerHealth;
-		[SerializeField] private PlayerMovement playerMovement;
-		[SerializeField] private PlayerAttack playerAttack;
 
+		private IGameStateMachine _gameStateMachine;
+
+		public void Construct(IGameStateMachine gameStateMachine)
+		{
+			_gameStateMachine = gameStateMachine;
+		}
+		
 		private void OnEnable()
 		{
 			playerHealth.HealthChanged += OnHealthChanged;
@@ -29,9 +35,8 @@ namespace Code.Player
 
 		private void Die()
 		{
-			playerMovement.enabled = false;
-			playerAttack.enabled = false;
-			PlayerDied?.Invoke();
+			animator.PlayDeath();
+			_gameStateMachine.Enter<GameOverState, GameResults>(GameResults.Lose);
 		}
 	}
 }

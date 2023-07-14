@@ -18,9 +18,9 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   type: 0
-  health: 10
+  health: 5
   damage: 1
-  attackCooldown: 1
+  attackCooldown: 3
   attackDistance: 1
   _cleavage: 1
-  moveSpeed: 5
+  moveSpeed: 3

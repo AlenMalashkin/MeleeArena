@@ -1,7 +1,10 @@
 using Code.Infrastructure.Assets;
 using Code.Infrastructure.Factory;
+using Code.Logic.GameplayObjects;
 using Code.Services;
+using Code.Services.GameplayObjectsService;
 using Code.Services.Input;
+using Code.Services.KillCountService;
 using Code.Services.PersistentProgress;
 using Code.Services.SaveLoadService;
 using Code.Services.StaticData;
@@ -39,7 +42,7 @@ namespace Code.Infrastructure.GameStates
 		}
 
 		private void OnLoad()
-			=> _gameStateMachine.Enter<MenuState>();
+			=> _gameStateMachine.Enter<LoadProgressState>();
 
 		private void RegisterAllServices()
 		{
@@ -48,9 +51,12 @@ namespace Code.Infrastructure.GameStates
 
 			_serviceLocator.RegisterService(_gameStateMachine);
 			_serviceLocator.RegisterService<IInputService>(InitInputService());
+			_serviceLocator.RegisterService<IKillCountService>(new KillCountService());
+			_serviceLocator.RegisterService<IGameResultReporterService>(new GameResultReporterService());
 			_serviceLocator.RegisterService<IGameFactory>(new GameFactory(
 				_serviceLocator.Resolve<IAssetProvider>(),
-				_serviceLocator.Resolve<IStaticDataService>())
+				_serviceLocator.Resolve<IStaticDataService>(),
+				_serviceLocator.Resolve<IKillCountService>(), _serviceLocator.Resolve<IGameResultReporterService>())
 			);
 			_serviceLocator.RegisterService<IUIFactory>(new UIFactory
 			(
@@ -59,9 +65,9 @@ namespace Code.Infrastructure.GameStates
 				_serviceLocator.Resolve<IStaticDataService>(),
 				_loadingCurtain
 			));
-			_serviceLocator.RegisterService<IWindowService>(new WindowService(_serviceLocator.Resolve<IUIFactory>()));
 			_serviceLocator.RegisterService<IPersistentProgressService>(new PersistentProgressService());
 			_serviceLocator.RegisterService<ISaveLoadService>(new SaveLoadService(_serviceLocator.Resolve<IPersistentProgressService>()));
+			_serviceLocator.RegisterService<IWindowService>(new WindowService(_serviceLocator.Resolve<IUIFactory>()));
 		}
 
 		private void RegisterAssetProvider()

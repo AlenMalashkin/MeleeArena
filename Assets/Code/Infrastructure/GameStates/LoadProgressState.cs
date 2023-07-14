@@ -21,7 +21,7 @@ namespace Code.Infrastructure.GameStates
 		{
 			LoadProgressOrCreateNew();
 			
-			_gameStateMachine.Enter<LoadLevelState, string>("Main");
+			_gameStateMachine.Enter<MenuState>();
 		}
 
 		public void Exit()

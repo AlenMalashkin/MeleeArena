@@ -1,4 +1,4 @@
-using Code.Data;
+﻿using Code.Data;
 
 namespace Code.Services.PersistentProgress
 {

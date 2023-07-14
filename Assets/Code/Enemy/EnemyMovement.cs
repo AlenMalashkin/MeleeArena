@@ -9,7 +9,7 @@ namespace Code.Enemy
 	{
 		[SerializeField] private NavMeshAgent agent;
 
-		private const float MinDistance = 2.5f;
+		private const float MinDistance = 1f;
 		
 		private float _moveSpeed;
 		private Transform _playerPosition;
@@ -26,10 +26,7 @@ namespace Code.Enemy
 		private void Update()
 		{
 			if (TargetIsNotReached())
-			{
 				agent.destination = _playerPosition.position;
-				agent.isStopped = false;
-			}
 		}
 
 		private bool TargetIsNotReached()

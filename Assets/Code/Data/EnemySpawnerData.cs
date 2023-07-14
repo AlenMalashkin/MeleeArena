@@ -9,11 +9,13 @@ namespace Code.Data
 	{
 		public EnemyType EnemyType;
 		public Vector3 Position;
+		public float TimeToRespawn;
 
-		public EnemySpawnerData(EnemyType type, Vector3 position)
+		public EnemySpawnerData(EnemyType type, Vector3 position, float timeToRespawn)
 		{
 			EnemyType = type;
 			Position = position;
+			TimeToRespawn = timeToRespawn;
 		}
 	}
 }

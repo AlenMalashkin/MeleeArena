@@ -7,6 +7,7 @@ namespace Code.UI.Services.Factory
 	{
 		void CreateLoseScreen();
 		void CreateMenu();
+		void CreateShop();
 		Task CreateUIRoot();
 	}
 }

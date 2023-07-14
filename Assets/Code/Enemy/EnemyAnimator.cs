@@ -14,11 +14,14 @@ namespace Code.Enemy
         private static readonly int IsMoving = Animator.StringToHash("IsMoving");
         private static readonly int Hit = Animator.StringToHash("Hit");
         private static readonly int Die = Animator.StringToHash("Die");
+        private static readonly int Victory = Animator.StringToHash("Victory");
 
+        private readonly int _idleStateHash = Animator.StringToHash("idle");
         private readonly int _attackStateHash = Animator.StringToHash("attack");
         private readonly int _moveStateHash = Animator.StringToHash("move");
         private readonly int _hitStateHash = Animator.StringToHash("hit");
         private readonly int _deathStateHash = Animator.StringToHash("death");
+        private readonly int _victoryStateHash = Animator.StringToHash("victory");
         
         private Animator _animator;
         
@@ -32,6 +35,7 @@ namespace Code.Enemy
         public void PlayAttack() => _animator.SetTrigger(Attack);
         public void PlayHit() => _animator.SetTrigger(Hit);
         public void PlayDie() => _animator.SetTrigger(Die);
+        public void PlayVictory() => _animator.SetTrigger(Victory);
 
         public void EnteredState(int stateHash)
             => StateEntered?.Invoke(ForState(stateHash));
@@ -43,7 +47,9 @@ namespace Code.Enemy
         {
             AnimatorState state;
 
-            if (stateHash == _moveStateHash)
+            if (stateHash == _idleStateHash)
+                state = AnimatorState.Idle;
+            else if (stateHash == _moveStateHash)
                 state = AnimatorState.Move;
             else if (stateHash == _attackStateHash)
                 state = AnimatorState.Attack;
@@ -51,10 +57,10 @@ namespace Code.Enemy
                 state = AnimatorState.Hit;
             else if (stateHash == _deathStateHash)
                 state = AnimatorState.Die;
+            else if (stateHash == _victoryStateHash)
+                state = AnimatorState.Victory;
             else
                 state = AnimatorState.Unknown;
-
-            Debug.Log(state);
             
             return state;
         }

@@ -1,34 +1,36 @@
-using Code.Player;
+using Code.Services.GameOverReporterService;
+using Code.Services.GameplayObjectsService;
+using Code.Services.KillCountService;
 using UnityEngine;
 
 namespace Code.Infrastructure.GameStates
 {
-	public class GameState : IPayloadedState<GameObject>
+	public class GameState : IState
 	{
 		private IGameStateMachine _gameStateMachine;
-		private GameObject _player;
-		private PlayerDeath _playerDeath;
-		
-		public GameState(IGameStateMachine gameStateMachine)
+		private IKillCountService _killCountService;
+
+		public GameState(IGameStateMachine gameStateMachine, IKillCountService killCountService)
 		{
 			_gameStateMachine = gameStateMachine;
+			_killCountService = killCountService;
 		}
 
-		public void Enter(GameObject payload)
+		public void Enter()
 		{
-			_player = payload;
-			_playerDeath = _player.GetComponent<PlayerDeath>();
-			_playerDeath.PlayerDied += OnPlayerDied;
+			_killCountService.Reset();
+			_killCountService.KillCountChanged += OnKillCountChanged;
 		}
 
 		public void Exit()
 		{
-			_playerDeath.PlayerDied -= OnPlayerDied;
+			_killCountService.KillCountChanged -= OnKillCountChanged;
 		}
 
-		private void OnPlayerDied()
+		private void OnKillCountChanged(int killCount)
 		{
-			_gameStateMachine.Enter<GameOverState>();
+			if (killCount >= 3)
+				_gameStateMachine.Enter<GameOverState, GameResults>(GameResults.Win);
 		}
 	}
 }
