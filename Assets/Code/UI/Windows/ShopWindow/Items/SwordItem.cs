@@ -1,48 +1,61 @@
-﻿using System;
-using Code.Data;
-using Code.Services;
+﻿using Code.Data;
 using Code.Services.PersistentProgress;
 using Code.Services.SaveLoadService;
-using Code.StaticData;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Code.UI.Windows.ShopWindow
 {
 	public class SwordItem : ShopItemBase
 	{
-		[SerializeField] private ItemStaticData itemStaticData;
-
+		[SerializeField] private Button buyOrEquipButton;
+		[SerializeField] private Image image;
+		[SerializeField] private TextMeshProUGUI cost;
+		
 		private ISaveLoadService _saveLoadService;
 		private IPersistentProgressService _persistentProgress;
-		private ItemType _type;
-		private string _itemName;
+		private ItemData _itemData;
 
-		public void Construct(ISaveLoadService saveLoadService, IPersistentProgressService persistentProgressService)
+		public void Construct(ItemData itemData, ISaveLoadService saveLoadService, IPersistentProgressService persistentProgressService)
 		{
+			_itemData = itemData;
 			_saveLoadService = saveLoadService;
 			_persistentProgress = persistentProgressService;
-		}
 
-		protected override void OnAwake()
-		{
-			_type = itemStaticData.Type;
-			_itemName = ItemAddressByType.GetItemAddressByType(_type);
-		}
+			IsBougth = _persistentProgress.Progress.BoughtItems.Exists(x =>
+				x == ItemAddressByType.GetItemAddressByType(_itemData.Type));
 
-		private void OnEnable()
-		{
-			SubscribeOnBuy();
-		}
-
-		private void OnDisable()
-		{
-			UnsubscribeOnBuy();
+			if (IsBougth)
+			{
+				image.sprite = _itemData.Sprite;
+				image.color = new Color(255, 255, 255, 255);
+				cost.text = "Equip";
+			}
+			else
+			{
+				image.sprite = _itemData.Sprite;
+				image.color = new Color(255, 255, 255, 100);
+				cost.text = _itemData.Cost + "";
+			}
+			
+			buyOrEquipButton.onClick.AddListener(Buy);
+			buyOrEquipButton.onClick.AddListener(Equip);
 		}
 
 		protected override void Buy()
 		{
-			_persistentProgress.Progress.BoughtItems.Add(_itemName);
+			if (_persistentProgress.Progress.BoughtItems.Exists(x => 
+				x == ItemAddressByType.GetItemAddressByType(_itemData.Type))) 
+				return;
+			
+			_persistentProgress.Progress.BoughtItems.Add(ItemAddressByType.GetItemAddressByType(_itemData.Type));
 			_saveLoadService.Save();
+		}
+
+		protected override void Equip()
+		{
+			_persistentProgress.Progress.EquippedItem = ItemAddressByType.GetItemAddressByType(_itemData.Type);
 		}
 	}
 }

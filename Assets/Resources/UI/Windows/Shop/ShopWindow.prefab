@@ -425,6 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17ead03f92d498b92c5b735705cb327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemStaticData: {fileID: 11400000, guid: 92ea6df25e441084ea56ffe6e0461088, type: 2}
   itemBase: {fileID: 1523327479702364112, guid: 9a9f72abf11816a458d8387616ffb070, type: 3}
   back: {fileID: 7318344504189883543}
   itemContainer: {fileID: 3970792409925122011}
