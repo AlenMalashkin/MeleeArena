@@ -10,12 +10,10 @@ namespace Code.UI.Windows.LoseWindow
 		[SerializeField] private Button backButton;
 
 		private IGameStateMachine _gameStateMachine;
-		private LoadingCurtain.LoadingCurtain _loadingCurtain;
 
-		public void Construct(IGameStateMachine gameStateMachine, LoadingCurtain.LoadingCurtain loadingCurtain)
+		public void Construct(IGameStateMachine gameStateMachine)
 		{
 			_gameStateMachine = gameStateMachine;
-			_loadingCurtain = loadingCurtain;
 		}
 
 		protected override void OnAwake()
@@ -26,7 +24,7 @@ namespace Code.UI.Windows.LoseWindow
 
 		private void Restart()
 		{
-			_gameStateMachine.Enter<LoadProgressState>();
+			_gameStateMachine.Enter<LoadLevelState, string>("Main");
 		}
 
 		private void Back()

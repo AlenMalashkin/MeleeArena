@@ -31,6 +31,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a062736b09419504ca1b1fc04b3ca2e7, type: 2}
+    - target: {fileID: 5468253709013356955, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
+      propertyPath: reward
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5783237777474458760, guid: 78e7d9d24b488414a975ffb84e3dfff1, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy

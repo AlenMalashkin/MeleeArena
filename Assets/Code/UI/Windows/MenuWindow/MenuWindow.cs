@@ -1,8 +1,6 @@
 using Code.Infrastructure.GameStates;
 using Code.Services;
 using Code.UI.Services.WindowService;
-using Palmmedia.ReportGenerator.Core.Parser.Analysis;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 

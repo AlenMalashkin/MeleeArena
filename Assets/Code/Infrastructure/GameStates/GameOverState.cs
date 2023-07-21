@@ -1,3 +1,4 @@
+using System;
 using Code.Services.GameOverReporterService;
 using Code.Services.GameplayObjectsService;
 using Code.UI.Services.WindowService;
@@ -18,8 +19,19 @@ namespace Code.Infrastructure.GameStates
 		
 		public void Enter(GameResults results)
 		{
-			_windowService.Open(WindowType.LoseWindow);
 			_gameResultReporterService.ReportResults(results);
+
+			switch (results)
+			{
+				case GameResults.Win:
+					_windowService.Open(WindowType.WinWindow);
+					break;
+				case GameResults.Lose:
+					_windowService.Open(WindowType.LoseWindow);
+					break;
+				default:
+					throw new ArgumentOutOfRangeException(nameof(results), results, null);
+			}
 		}
 
 		public void Exit()

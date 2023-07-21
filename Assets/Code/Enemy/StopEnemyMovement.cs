@@ -38,8 +38,6 @@ namespace Code.Enemy
 		{
 			if (animatorState == AnimatorState.Attack)
 				_agent.isStopped = true;
-			else if (animatorState == AnimatorState.Victory)
-				_agent.isStopped = true;
 		}
 	}
 }

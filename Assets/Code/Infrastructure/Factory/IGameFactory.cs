@@ -11,6 +11,6 @@ namespace Code.Infrastructure.Factory
 		Task<GameObject> CreatePlayerSword(Transform under);
 		Task<GameObject> CreateHud();
 		Task<GameObject> CreateEnemy(EnemyType type, Vector3 at);
-		Task<GameObject> CreateSpawner(EnemyType type, Vector3 at, float timeToRespawn);
+		Task<GameObject> CreateSpawner(Vector3 at);
 	}
 }

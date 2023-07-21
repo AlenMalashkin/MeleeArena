@@ -4,6 +4,9 @@
 	{
 		BronzeSword,
 		SilverSword,
-		RedSword
+		RedSword,
+		GreenSword,
+		IceSword,
+		LavaSword
 	}
 }

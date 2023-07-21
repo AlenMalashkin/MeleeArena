@@ -1,6 +1,8 @@
+using Code.Data;
 using Code.Services.GameOverReporterService;
 using Code.Services.GameplayObjectsService;
 using Code.Services.KillCountService;
+using Code.Services.WaveService;
 using UnityEngine;
 
 namespace Code.Infrastructure.GameStates
@@ -9,11 +11,13 @@ namespace Code.Infrastructure.GameStates
 	{
 		private IGameStateMachine _gameStateMachine;
 		private IKillCountService _killCountService;
+		private IWaveService _waveService;
 
-		public GameState(IGameStateMachine gameStateMachine, IKillCountService killCountService)
+		public GameState(IGameStateMachine gameStateMachine, IKillCountService killCountService, IWaveService waveService)
 		{
 			_gameStateMachine = gameStateMachine;
 			_killCountService = killCountService;
+			_waveService = waveService;
 		}
 
 		public void Enter()
@@ -29,7 +33,7 @@ namespace Code.Infrastructure.GameStates
 
 		private void OnKillCountChanged(int killCount)
 		{
-			if (killCount >= 3)
+			if (killCount >= WaveSettingsByWaveType.GetWaveSettingsByWaveType(_waveService.Wave).KillCount)
 				_gameStateMachine.Enter<GameOverState, GameResults>(GameResults.Win);
 		}
 	}

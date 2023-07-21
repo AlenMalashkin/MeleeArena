@@ -17,7 +17,6 @@ namespace Code.Services.KillCountService
 		public void CountKill()
 		{
 			KillCount++;
-			Debug.Log(KillCount);
 			KillCountChanged?.Invoke(KillCount);
 		}
 

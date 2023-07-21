@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Egor\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Egor\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_MeleeArena.1918549987.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Egor\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
-    <e p="D:\UnityProjects\MeleeArena" t="IncludeRecursive">
+    <e p="C:\Users\gor28\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\gor28\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_MeleeArena.1418361772.00" t="ExcludeRecursive" />
+    <e p="C:\Users\gor28\MeleeArena\MeleeArena" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -18,6 +17,13 @@
             <e p="ItemAddressByType.cs" t="Include" />
             <e p="ItemData.cs" t="Include" />
             <e p="PlayerProgress.cs" t="Include" />
+            <e p="PlayerStats.cs" t="Include" />
+            <e p="Waves" t="Include">
+              <e p="WaveSettings.cs" t="Include" />
+              <e p="WaveSettingsByWaveType.cs" t="Include" />
+              <e p="WaveType.cs" t="Include" />
+              <e p="WaveTypeByWave.cs" t="Include" />
+            </e>
             <e p="WindowConfig.cs" t="Include" />
           </e>
           <e p="Editor" t="Include">
@@ -27,6 +33,7 @@
           <e p="Enemy" t="Include">
             <e p="AnimateEnemyMovement.cs" t="Include" />
             <e p="CheckAttackRange.cs" t="Include" />
+            <e p="DropLoot.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemyAnimator.cs" t="Include" />
             <e p="EnemyAttack.cs" t="Include" />
@@ -75,8 +82,10 @@
             <e p="AnimatorStateReporter.cs" t="Include" />
             <e p="IAnimationStateReader.cs" t="Include" />
             <e p="IHealth.cs" t="Include" />
+            <e p="Loot.cs" t="Include" />
             <e p="Spawners" t="Include">
               <e p="EnemySpawner.cs" t="Include" />
+              <e p="EnemySpawnMarker.cs" t="Include" />
               <e p="PlayerSpawner.cs" t="Include" />
             </e>
           </e>
@@ -90,6 +99,10 @@
             <e p="PlayerMovement.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
+            <e p="Bank" t="Include">
+              <e p="Bank.cs" t="Include" />
+              <e p="IBank.cs" t="Include" />
+            </e>
             <e p="GameOverReporterService" t="Include">
               <e p="GameResultReporterService.cs" t="Include" />
               <e p="GameResults.cs" t="Include" />
@@ -119,6 +132,10 @@
               <e p="IStaticDataService.cs" t="Include" />
               <e p="StaticDataService.cs" t="Include" />
             </e>
+            <e p="WaveService" t="Include">
+              <e p="IWaveService.cs" t="Include" />
+              <e p="WaveService.cs" t="Include" />
+            </e>
           </e>
           <e p="StaticData" t="Include">
             <e p="EnemyStaticData.cs" t="Include" />
@@ -129,9 +146,14 @@
           <e p="UI" t="Include">
             <e p="Elements" t="Include">
               <e p="ActorUI.cs" t="Include" />
+              <e p="DisplayTargetKillCount.cs" t="Include" />
+              <e p="DisplayWaveTypeInTextField.cs" t="Include" />
               <e p="HpBar.cs" t="Include" />
               <e p="Hud.cs" t="Include" />
+              <e p="IUpdatableUI.cs" t="Include" />
               <e p="LookAtCamera.cs" t="Include" />
+              <e p="MoneyDisplayer.cs" t="Include" />
+              <e p="RewardAdShow.cs" t="Include" />
             </e>
             <e p="LoadingCurtain" t="Include">
               <e p="LoadingCurtain.cs" t="Include" />
@@ -157,12 +179,16 @@
                 <e p="Items" t="Include">
                   <e p="ItemType.cs" t="Include" />
                   <e p="ShopItemBase.cs" t="Include" />
+                  <e p="ShopItemUI.cs" t="Include" />
                   <e p="SwordItem.cs" t="Include" />
                 </e>
                 <e p="ShopWindow.cs" t="Include" />
               </e>
               <e p="WindowBase.cs" t="Include" />
               <e p="WindowType.cs" t="Include" />
+              <e p="WinWindow" t="Include">
+                <e p="WinWindow.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>
@@ -268,6 +294,75 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
             <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+        <e p="WebGLTemplates" t="Include">
+          <e p="LICENSE.txt" t="Include" />
+          <e p="Notices.txt" t="Include" />
+        </e>
+        <e p="YandexGame" t="Include">
+          <e p="README.txt" t="Include" />
+          <e p="ScriptsYG" t="Include">
+            <e p="BannerYG.cs" t="Include" />
+            <e p="DebuggingModeYG.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="AutoLocalizationMasseWindow.cs" t="Include" />
+              <e p="BannerYGEditor.cs" t="Include" />
+              <e p="CreateYandexGameEditor.cs" t="Include" />
+              <e p="CSVFileEditorWindow.cs" t="Include" />
+              <e p="CSVManager.cs" t="Include" />
+              <e p="FontMasseInstallEditorWindow.cs" t="Include" />
+              <e p="LanguageYGEditor.cs" t="Include" />
+              <e p="PostProcessBuild" t="Include">
+                <e p="ArchivingBuild.cs" t="Include" />
+                <e p="ModifyIndexFile" t="Include">
+                  <e p="AdWhenLoadingGame.cs" t="Include" />
+                  <e p="BakcgroundFormat.cs" t="Include" />
+                  <e p="MetricaCounterID.cs" t="Include" />
+                  <e p="ModifyIndexFile.cs" t="Include" />
+                  <e p="PixelRatioMobile.cs" t="Include" />
+                </e>
+                <e p="PostProcessBuild.cs" t="Include" />
+              </e>
+              <e p="TranslationTableEditorWindow.cs" t="Include" />
+            </e>
+            <e p="ForVisualScriptYG.cs" t="Include" />
+            <e p="GetPlayerYG.cs" t="Include" />
+            <e p="GraphicSettingsYG.cs" t="Include" />
+            <e p="ImageLoadYG.cs" t="Include" />
+            <e p="InfoYG.cs" t="Include" />
+            <e p="Inside" t="Include">
+              <e p="CallingAnEvent.cs" t="Include" />
+              <e p="ConfigYG.cs" t="Include" />
+              <e p="NewResultLeaderboard.cs" t="Include" />
+            </e>
+            <e p="LanguageYG.cs" t="Include" />
+            <e p="LeaderboardYG.cs" t="Include" />
+            <e p="PaymentsYG.cs" t="Include" />
+            <e p="PromptYG.cs" t="Include" />
+            <e p="ReviewYG.cs" t="Include" />
+            <e p="UnityToolbag-main" t="Include">
+              <e p="ConditionallyVisiblePropertyDrawer" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="ConditionallyVisiblePropertyDrawer.cs" t="Include" />
+                </e>
+                <e p="Runtime" t="Include">
+                  <e p="ConditionallyVisibleAttribute.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+              <e p="Notices.txt" t="Include" />
+            </e>
+            <e p="ViewingAdsYG.cs" t="Include" />
+            <e p="YandexGame.cs" t="Include" />
+            <e p="YandexMetrica" t="Include">
+              <e p="JsonUtils.cs" t="Include" />
+              <e p="YandexMetrica.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Third-Party Notices.txt" t="Include" />
+          <e p="WorkingData" t="Include">
+            <e p="SavesYG.cs" t="Include" />
           </e>
         </e>
       </e>

@@ -1,46 +1,50 @@
 ﻿using Code.Data;
+using Code.Services.Bank;
 using Code.Services.PersistentProgress;
 using Code.Services.SaveLoadService;
-using TMPro;
+using Code.UI.Elements;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Code.UI.Windows.ShopWindow
 {
+	[RequireComponent(typeof(IUpdatableUI))]
 	public class SwordItem : ShopItemBase
 	{
-		[SerializeField] private Button buyOrEquipButton;
-		[SerializeField] private Image image;
-		[SerializeField] private TextMeshProUGUI cost;
-		
+		[SerializeField] private ShopItemUI shopItemUI;
+
+		private ShopWindow _shopWindow;
+		private IBank _bank;
 		private ISaveLoadService _saveLoadService;
 		private IPersistentProgressService _persistentProgress;
 		private ItemData _itemData;
 
-		public void Construct(ItemData itemData, ISaveLoadService saveLoadService, IPersistentProgressService persistentProgressService)
+		public void Construct(ItemData itemData, IBank bank, ISaveLoadService saveLoadService,
+			IPersistentProgressService persistentProgressService, ShopWindow shopWindow)
 		{
 			_itemData = itemData;
+			_bank = bank;
 			_saveLoadService = saveLoadService;
 			_persistentProgress = persistentProgressService;
+			_shopWindow = shopWindow;
 
 			IsBougth = _persistentProgress.Progress.BoughtItems.Exists(x =>
 				x == ItemAddressByType.GetItemAddressByType(_itemData.Type));
 
-			if (IsBougth)
-			{
-				image.sprite = _itemData.Sprite;
-				image.color = new Color(255, 255, 255, 255);
-				cost.text = "Equip";
-			}
-			else
-			{
-				image.sprite = _itemData.Sprite;
-				image.color = new Color(255, 255, 255, 100);
-				cost.text = _itemData.Cost + "";
-			}
+			IsEquipped = _persistentProgress.Progress.EquippedItem ==
+			             ItemAddressByType.GetItemAddressByType(_itemData.Type);
 			
-			buyOrEquipButton.onClick.AddListener(Buy);
-			buyOrEquipButton.onClick.AddListener(Equip);
+			shopItemUI.Construct(_persistentProgress, _itemData);
+			_shopWindow.UpdateShopItemsUI();
+
+			shopItemUI.BuyOrEquipButton.onClick.AddListener(BuyOrEquip);
+		}
+
+		private void BuyOrEquip()
+		{
+			if (!IsBougth)
+				Buy();
+			else
+				Equip();
 		}
 
 		protected override void Buy()
@@ -48,14 +52,25 @@ namespace Code.UI.Windows.ShopWindow
 			if (_persistentProgress.Progress.BoughtItems.Exists(x => 
 				x == ItemAddressByType.GetItemAddressByType(_itemData.Type))) 
 				return;
-			
+
+			IsBougth = true;
+
+			_bank.SpendMoney(_itemData.Cost);
 			_persistentProgress.Progress.BoughtItems.Add(ItemAddressByType.GetItemAddressByType(_itemData.Type));
 			_saveLoadService.Save();
+			
+			_shopWindow.UpdateShopItemsUI();
 		}
 
 		protected override void Equip()
 		{
 			_persistentProgress.Progress.EquippedItem = ItemAddressByType.GetItemAddressByType(_itemData.Type);
+			_persistentProgress.Progress.PlayerStats.Damage = _itemData.Damage;
+			_saveLoadService.Save();
+
+			IsEquipped = true;
+
+			_shopWindow.UpdateShopItemsUI();
 		}
 	}
 }

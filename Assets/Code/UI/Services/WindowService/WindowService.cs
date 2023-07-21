@@ -1,3 +1,4 @@
+using System;
 using Code.UI.Services.Factory;
 using Code.UI.Windows;
 
@@ -19,9 +20,14 @@ namespace Code.UI.Services.WindowService
 				case WindowType.LoseWindow :
 					_uiFactory.CreateLoseScreen();
 					break;
+				case WindowType.WinWindow:
+					_uiFactory.CreateWinScreen();
+					break;
 				case WindowType.Shop :
 					_uiFactory.CreateShop();
 					break;
+				default:
+					throw new ArgumentOutOfRangeException(nameof(type), type, null);
 			}
 		}
 	}

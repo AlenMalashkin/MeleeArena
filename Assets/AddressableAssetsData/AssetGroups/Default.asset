@@ -30,7 +30,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7b97f0b33769fbf4ca8ad3edceef98df
-    m_Address: EnemySpawner
+    m_Address: EnemySpawnMarker
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d09595b6c19f6c8459b830ca0c133ca2
@@ -51,6 +51,42 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 635b9c60fe8860a4e9a5ab1a4658720f
     m_Address: Sword1_Silver
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c525f37b0f0a79a4195ed2558cd94c21
+    m_Address: BlueEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: db39674a5f551274ca2cf6ac086b8f45
+    m_Address: RedEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d5a4bc93356521a438bf56cb9bc74f04
+    m_Address: EnemySpawner
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0114174d2d0e11f419b9cd9688d8ecdc
+    m_Address: GlodEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fe8812c5332bff2429d1f54ac7861612
+    m_Address: GreenEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7754be43e836a3e4587c4de72019f576
+    m_Address: PurpleEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2efd1c51d7e487f4ba79e734c950eca8
+    m_Address: GreenSword
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1dbf24f8a486a5d43aa8eef186e3375d
+    m_Address: IceSword
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 97d88fb9a3565d84daf5fff081fcbb91
+    m_Address: LavaSword
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

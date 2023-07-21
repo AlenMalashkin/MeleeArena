@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
 using Code.Enemy;
 using Code.Infrastructure.Factory;
-using Code.Logic.GameplayObjects;
 using Code.Services.GameOverReporterService;
 using Code.Services.GameplayObjectsService;
 using Code.Services.KillCountService;
@@ -21,7 +18,6 @@ namespace Code.Logic.Spawners
         private EnemyDeath _enemyDeath;
         private IGameResultReporterService _gameResultReporterService;
         private SyncedTimer _timer;
-        private bool _canSpawn;
 
         public void Construct(IGameFactory gameFactory, IKillCountService killCountService, IGameResultReporterService gameResultReporterService)
         {
@@ -30,35 +26,29 @@ namespace Code.Logic.Spawners
             _timer = new SyncedTimer(TimerType.UpdateTick);
             _gameResultReporterService = gameResultReporterService;
             _gameResultReporterService.ResultsReported += OnResultsReported;
-            _canSpawn = true;
+            _timer.TimerFinished += Spawn;
         }
 
         private void OnResultsReported(GameResults results)
         {
-            _canSpawn = false;
             _gameResultReporterService.ResultsReported -= OnResultsReported;
-            _timer.TimerFinished -= Respawn;
+            _timer.TimerFinished -= Spawn;
             _timer.Stop();
         }
 
         public async void Spawn()
         {
-            if (_canSpawn)
-            {
-                GameObject enemy = await _gameFactory.CreateEnemy(EnemyType.Default, transform.position);
-                _enemyDeath = enemy.GetComponent<EnemyDeath>();
-                _enemyDeath.EnemyDied += _killCountService.CountKill;
-                _timer.Start(TimeToRespawn);
-                _timer.TimerFinished += Respawn;
-            }
-            
+            GameObject enemy = await _gameFactory.CreateEnemy(Type, transform.position);
+            _enemyDeath = enemy.GetComponent<EnemyDeath>();
+            _enemyDeath.EnemyDied += OnEnemyDied;
         }
 
-        private void Respawn()
+        private void OnEnemyDied()
         {
-            Spawn();
-            _enemyDeath.EnemyDied -= _killCountService.CountKill;
-            _timer.TimerFinished -= Respawn;
+            _timer.Start(TimeToRespawn);
+            _killCountService.CountKill();
+            if (_enemyDeath != null)
+                _enemyDeath.EnemyDied -= OnEnemyDied;
         }
     }
 }

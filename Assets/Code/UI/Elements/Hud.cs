@@ -1,5 +1,4 @@
-﻿using Code.Logic.GameplayObjects;
-using Code.Services.GameOverReporterService;
+﻿using Code.Services.GameOverReporterService;
 using Code.Services.GameplayObjectsService;
 using UnityEngine;
 

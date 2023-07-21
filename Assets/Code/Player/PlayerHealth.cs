@@ -10,28 +10,28 @@ namespace Code.Player
 
         [SerializeField] private PlayerAnimator animator;
         
-        private int _maxHealth;
-        private int _currentHealth;
+        [SerializeField] private int maxHealth;
+        [SerializeField] private int currentHealth;
 
         public int MaxHealth
         {
-            get => _maxHealth;
-            set => _maxHealth = value;
+            get => maxHealth;
+            set => maxHealth = value;
         }
 
         public int CurrentHealth
         {
-            get => _currentHealth <= 0 ? 0 : _currentHealth;
+            get => currentHealth <= 0 ? 0 : currentHealth;
             set
             {
-                _currentHealth = value;
+                currentHealth = value;
                 HealthChanged?.Invoke(value);
             }
         }
 
         public void TakeDamage(int damage)
         {
-            if (_currentHealth <= 0)
+            if (currentHealth <= 0)
                 return;
 
             animator.PlayHit();

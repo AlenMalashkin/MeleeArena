@@ -1,5 +1,6 @@
 using System.Linq;
 using Code.Data;
+using Code.Logic;
 using Code.Logic.Spawners;
 using Code.StaticData;
 using UnityEditor;
@@ -20,8 +21,8 @@ namespace Code.Editor
 			if (GUILayout.Button("Collect"))
 			{
 				levelStaticData.LevelName = SceneManager.GetActiveScene().name;
-				levelStaticData.EnemySpawners = FindObjectsOfType<EnemySpawner>()
-					.Select(x => new EnemySpawnerData(x.Type, x.transform.position, x.TimeToRespawn))
+				levelStaticData.EnemySpawners = FindObjectsOfType<EnemySpawnMarker>()
+					.Select(x => new EnemySpawnerData(x.transform.position))
 					.ToList();
 				levelStaticData.PlayerPositionOnLevel = FindObjectOfType<PlayerSpawner>().transform.position;
 			}

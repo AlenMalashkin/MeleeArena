@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Code.Data;
+using UnityEngine;
 
 namespace Code.StaticData
 {

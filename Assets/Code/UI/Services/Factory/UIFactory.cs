@@ -11,6 +11,7 @@ using Code.UI.Windows;
 using Code.UI.Windows.LoseWindow;
 using Code.UI.Windows.MenuWindow;
 using Code.UI.Windows.ShopWindow;
+using Code.UI.Windows.WinWindow;
 using UnityEngine;
 
 namespace Code.UI.Services.Factory
@@ -36,7 +37,14 @@ namespace Code.UI.Services.Factory
 		{
 			WindowConfig config = _staticDataService.ForWindow(WindowType.LoseWindow);
 			LoseWindow loseWindow = Object.Instantiate(config.WindowBase, _uiRoot) as LoseWindow;
-			loseWindow.Construct(_gameStateMachine, _loadingCurtain);
+			loseWindow.Construct(_gameStateMachine);
+		}
+
+		public void CreateWinScreen()
+		{
+			WindowConfig config = _staticDataService.ForWindow(WindowType.WinWindow);
+			WinWindow winWindow = Object.Instantiate(config.WindowBase, _uiRoot) as WinWindow;
+			winWindow.Construct(_gameStateMachine);
 		}
 
 		public void CreateMenu()

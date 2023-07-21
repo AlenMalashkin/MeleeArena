@@ -10,6 +10,8 @@ namespace Code.Player
 	{
 		[SerializeField] private PlayerAnimator animator;
 
+		public int Damage { get; set; }
+
 		private IInputService _inputService;
 		private LayerMask _layerMask;
 		private Collider[] _hits = new Collider[3];
@@ -32,7 +34,7 @@ namespace Code.Player
 			for (int i = 0; i < Hit(); i++)
 			{
 				if (_hits[i].transform.parent.TryGetComponent(out IHealth health))
-					health?.TakeDamage(3);
+					health?.TakeDamage(Damage);
 			}
 		}
 

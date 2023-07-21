@@ -2,6 +2,11 @@ namespace Code.Enemy
 {
 	public enum EnemyType
 	{
-		Default
+		Default,
+		Red,
+		Blue,
+		Green,
+		Gold,
+		Purple
 	}
 }

@@ -10,7 +10,10 @@ namespace Code.Data
 		{
 			[ItemType.BronzeSword] = AssetAddress.BronzeSword,
 			[ItemType.SilverSword] = AssetAddress.SilverSword,
-			[ItemType.RedSword] = AssetAddress.RedSword
+			[ItemType.RedSword] = AssetAddress.RedSword,
+			[ItemType.GreenSword] = AssetAddress.GreenSword,
+			[ItemType.IceSword] = AssetAddress.IceSword,
+			[ItemType.LavaSword] = AssetAddress.LavaSword
 		};
 		
 		public static string GetItemAddressByType(ItemType type)

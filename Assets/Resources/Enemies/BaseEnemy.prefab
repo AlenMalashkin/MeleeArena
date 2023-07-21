@@ -525,6 +525,8 @@ GameObject:
   - component: {fileID: 1060696077790168986}
   - component: {fileID: 7288694941990816170}
   - component: {fileID: 5526909889016648876}
+  - component: {fileID: 5468253709013356955}
+  - component: {fileID: 2179936773124789397}
   m_Layer: 6
   m_Name: BaseEnemy
   m_TagString: Untagged
@@ -643,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067a390c4de441f68560dee5d47238fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement: {fileID: 0}
 --- !u!114 &4182224013682833937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,6 +717,7 @@ MonoBehaviour:
   hpBar: {fileID: 5645599074609629143}
   enemyHealth: {fileID: 1060696077790168986}
   attack: {fileID: 9078992735274560569}
+  agent: {fileID: 3749470076575211019}
   movement: {fileID: 2982007643240421103}
   colliders:
   - {fileID: 3525254410555756622}
@@ -731,3 +735,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 5645599074609629143}
+--- !u!114 &5468253709013356955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783237777474458760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60bb4dcad5a4441a37aee1315f87529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootPrefab: {fileID: 8615702282572278610, guid: 09f05589d2a032f4b8ae459d5810f6e5, type: 3}
+  enemyDeath: {fileID: 7288694941990816170}
+  reward: 0
+--- !u!114 &2179936773124789397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783237777474458760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 067a390c4de441f68560dee5d47238fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 2982007643240421103}

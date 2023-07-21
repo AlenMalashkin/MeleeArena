@@ -8,6 +8,7 @@ using Code.Services.KillCountService;
 using Code.Services.PersistentProgress;
 using Code.Services.SaveLoadService;
 using Code.Services.StaticData;
+using Code.Services.WaveService;
 using Code.UI.LoadingCurtain;
 using Code.UI.Services.Factory;
 using Code.UI.Services.WindowService;
@@ -26,8 +27,8 @@ namespace Code.Infrastructure.GameStates
 				[typeof(BootstrapState)] = new BootstrapState(this, loadingCurtain, sceneLoader, serviceLocator),
 				[typeof(MenuState)] = new MenuState(sceneLoader, loadingCurtain, serviceLocator.Resolve<IUIFactory>()),
 				[typeof(LoadProgressState)] = new LoadProgressState(this, serviceLocator.Resolve<IPersistentProgressService>(), serviceLocator.Resolve<ISaveLoadService>()),
-				[typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, loadingCurtain, serviceLocator.Resolve<IGameFactory>(), serviceLocator.Resolve<IAssetProvider>(), serviceLocator.Resolve<IStaticDataService>(), serviceLocator.Resolve<IUIFactory>()),
-				[typeof(GameState)] = new GameState(this, serviceLocator.Resolve<IKillCountService>()),
+				[typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, loadingCurtain, serviceLocator.Resolve<IGameFactory>(), serviceLocator.Resolve<IAssetProvider>(), serviceLocator.Resolve<IStaticDataService>(), serviceLocator.Resolve<IPersistentProgressService>(), serviceLocator.Resolve<IUIFactory>()),
+				[typeof(GameState)] = new GameState(this, serviceLocator.Resolve<IKillCountService>(), serviceLocator.Resolve<IWaveService>()),
 				[typeof(GameOverState)] = new GameOverState(serviceLocator.Resolve<IWindowService>(), serviceLocator.Resolve<IGameResultReporterService>()),
 			};
 		}

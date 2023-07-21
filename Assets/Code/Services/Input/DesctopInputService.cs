@@ -4,6 +4,8 @@ namespace Code.Services.Input
 {
 	public class DesctopInputService : InputService
 	{
+		private const string AttackButton = "Fire1";
+		
 		public override Vector2 MovementAxis
 		{
 			get
@@ -18,6 +20,9 @@ namespace Code.Services.Input
 				return axis;
 			}
 		}
+
+		public override bool IsAttackButtonUp()
+			=> UnityEngine.Input.GetButtonUp(AttackButton);
 
 		private static Vector2 GetUnityAxis()
 			=> new Vector2(UnityEngine.Input.GetAxis(Horizontal), UnityEngine.Input.GetAxis(Vertical));

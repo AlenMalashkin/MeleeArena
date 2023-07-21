@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Code.Data;
 using Code.Enemy;
 using Code.Infrastructure.Assets;
 using Code.Logic;
@@ -7,9 +8,12 @@ using Code.Logic.Spawners;
 using Code.Player;
 using Code.Services.GameplayObjectsService;
 using Code.Services.KillCountService;
+using Code.Services.PersistentProgress;
 using Code.Services.StaticData;
+using Code.Services.WaveService;
 using Code.StaticData;
 using Code.UI.Elements;
+using Code.UI.Windows.ShopWindow;
 using UnityEngine;
 
 namespace Code.Infrastructure.Factory
@@ -18,32 +22,34 @@ namespace Code.Infrastructure.Factory
 	{
 		private IAssetProvider _assetProvider;
 		private IStaticDataService _staticDataService;
+		private IPersistentProgressService _persistentProgressService;
 		private IKillCountService _killCountService;
 		private IGameResultReporterService _gameResultReporterService;
+		private IWaveService _waveService;
 		
 		private GameObject _playerGameObject;
 
-		public GameFactory(IAssetProvider assetProvider, IStaticDataService staticDataService,
-			IKillCountService killCountService, IGameResultReporterService gameResultReporterService)
+		public GameFactory(IAssetProvider assetProvider, IStaticDataService staticDataService, 
+			IPersistentProgressService persistentProgressService, IKillCountService killCountService, 
+			IGameResultReporterService gameResultReporterService, IWaveService waveService)
 		{
 			_assetProvider = assetProvider;
 			_staticDataService = staticDataService;
+			_persistentProgressService = persistentProgressService;
 			_killCountService = killCountService;
 			_gameResultReporterService = gameResultReporterService;
+			_waveService = waveService;
 		}
 
 		public async Task<GameObject> CreatePlayer(Vector3 at)
 		{
-			_playerGameObject = await _assetProvider.Instantiate(AssetAddress.PlayerPath);
+			_playerGameObject = await _assetProvider.Instantiate(AssetAddress.PlayerPath, at);
 			_playerGameObject.GetComponent<Player.Player>().Construct(_gameResultReporterService);
-			PlayerHealth playerHealth = _playerGameObject.GetComponent<PlayerHealth>();
-			playerHealth.MaxHealth = 10;
-			playerHealth.CurrentHealth = 10;
 			return _playerGameObject;
 		}
 
 		public async Task<GameObject> CreatePlayerSword(Transform under)
-			=> await _assetProvider.Instantiate(AssetAddress.BronzeSword, under);
+			=> await _assetProvider.Instantiate(_persistentProgressService.Progress.EquippedItem, under);
 
 		public async Task<GameObject> CreateHud()
 		{
@@ -68,15 +74,15 @@ namespace Code.Infrastructure.Factory
 			return enemy;
 		}
 
-		public async Task<GameObject> CreateSpawner(EnemyType type, Vector3 at, float timeToRespawn)
+		public async Task<GameObject> CreateSpawner(Vector3 at)
 		{
 			GameObject prefab = await _assetProvider.Load<GameObject>(AssetAddress.EnemySpawnerPath);
-			EnemySpawner enemySpawner = prefab.GetComponent<EnemySpawner>();
+			EnemySpawner enemySpawner = Object.Instantiate(prefab, at, Quaternion.identity).GetComponent<EnemySpawner>();
 			
 			enemySpawner.Construct(this, _killCountService, _gameResultReporterService);
 			enemySpawner.transform.position = at;
-			enemySpawner.Type = type;
-			enemySpawner.TimeToRespawn = timeToRespawn;
+			enemySpawner.Type = WaveSettingsByWaveType.GetWaveSettingsByWaveType(_waveService.Wave).Type;
+			enemySpawner.TimeToRespawn = WaveSettingsByWaveType.GetWaveSettingsByWaveType(_waveService.Wave).SpawnDuration;
 			enemySpawner.Spawn();
 			return enemySpawner.gameObject;
 		}

@@ -1,6 +1,8 @@
 using System;
 using Code.UI.Elements;
 using UnityEngine;
+using UnityEngine.AI;
+using AnimatorState = Code.Logic.AnimatorState;
 
 namespace Code.Enemy
 {
@@ -13,17 +15,20 @@ namespace Code.Enemy
 		[SerializeField] private HpBar hpBar;
 		[SerializeField] private EnemyHealth enemyHealth;
 		[SerializeField] private EnemyAttack attack;
+		[SerializeField] private NavMeshAgent agent;
 		[SerializeField] private EnemyMovement movement;
 		[SerializeField] private Collider[] colliders;
 
 		private void OnEnable()
 		{
 			enemyHealth.HealthChanged += CheckHealth;
+			animator.StateEntered += DisableEnemy;
 		}
 
 		private void OnDisable()
 		{
-			enemyHealth.HealthChanged += CheckHealth;
+			enemyHealth.HealthChanged -= CheckHealth;
+			animator.StateEntered -= DisableEnemy;
 		}
 
 		private void CheckHealth(int health)
@@ -39,14 +44,18 @@ namespace Code.Enemy
 			Destroy(gameObject, 3);
 		}
 
-		private void DisableEnemy()
+		private void DisableEnemy(AnimatorState state)
 		{
-			hpBar.gameObject.SetActive(false);
-			attack.enabled = false;
-			actorUI.enabled = false;
-			movement.enabled = false;
-			foreach (var collider in colliders)
-				collider.enabled = false;
+			if (state == AnimatorState.Die)
+			{
+				hpBar.gameObject.SetActive(false);
+				attack.enabled = false;
+				actorUI.enabled = false;
+				movement.enabled = false;
+				agent.isStopped = true;
+				foreach (var collider in colliders)
+					collider.enabled = false;
+			}
 		}
 	}
 }

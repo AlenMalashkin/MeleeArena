@@ -4,6 +4,7 @@ using Code.Infrastructure.Assets;
 using Code.Infrastructure.Factory;
 using Code.Logic;
 using Code.Player;
+using Code.Services.PersistentProgress;
 using Code.Services.StaticData;
 using Code.StaticData;
 using Code.UI.Elements;
@@ -22,13 +23,15 @@ namespace Code.Infrastructure.GameStates
 		private IGameFactory _gameFactory;
 		private IAssetProvider _assetProvider;
 		private IStaticDataService _staticDataService;
+		private IPersistentProgressService _persistentProgress;
 		private IUIFactory _uiFactory;
 
 		private GameObject _player;
 
 		public LoadLevelState(IGameStateMachine gameStateMachine, SceneLoader sceneLoader,
 			LoadingCurtain curtain, IGameFactory gameFactory, IAssetProvider assetProvider,
-			IStaticDataService staticDataService, IUIFactory uiFactory)
+			IStaticDataService staticDataService, IPersistentProgressService persistentProgress,
+			IUIFactory uiFactory)
 		{
 			_gameStateMachine = gameStateMachine;
 			_sceneLoader = sceneLoader;
@@ -36,6 +39,7 @@ namespace Code.Infrastructure.GameStates
 			_gameFactory = gameFactory;
 			_assetProvider = assetProvider;
 			_staticDataService = staticDataService;
+			_persistentProgress = persistentProgress;
 			_uiFactory = uiFactory;
 		}
 		
@@ -59,6 +63,7 @@ namespace Code.Infrastructure.GameStates
 		{
 			GameObject player = await _gameFactory.CreatePlayer(at);
 			await _gameFactory.CreatePlayerSword(player.GetComponent<PlayerEquipment>().SwordSpawnPoint);
+			player.GetComponent<PlayerAttack>().Damage = _persistentProgress.Progress.PlayerStats.Damage;
 			player.GetComponent<PlayerDeath>().Construct(_gameStateMachine);
 			return player;
 		}
@@ -73,7 +78,7 @@ namespace Code.Infrastructure.GameStates
 		{
 			foreach (var enemySpawner in levelStaticData.EnemySpawners)
 			{
-				await _gameFactory.CreateSpawner(enemySpawner.EnemyType, enemySpawner.Position, enemySpawner.TimeToRespawn);
+				await _gameFactory.CreateSpawner(enemySpawner.Position);
 			}
 		}
 
@@ -92,32 +97,6 @@ namespace Code.Infrastructure.GameStates
 			await InitEnemySpawners(levelStaticData);
 			CameraFollow();
 		}
-
-		/*private void InitGameplayObjectService()
-		{
-			InitGameplayObjects();
-
-			gameResultReporterService.SingleGameplayEntityMap.Add(typeof(Player.Player), playerGameplayEntity);
-			gameResultReporterService.SingleGameplayEntityMap.Add(typeof(Hud), hudGameplayEntity);
-			
-			gameResultReporterService.MultipleGameplayEntitiesMap.Add(typeof(EnemySpawner), _spawnerGameplayObjects);
-			gameResultReporterService.MultipleGameplayEntitiesMap.Add(typeof(Enemy.Enemy), _enemyGameplayObjects);
-		}
-
-		private void InitGameplayObjects()
-		{
-			playerGameplayEntity = _player.GetComponent<IGameplayEntity>();
-			hudGameplayEntity = _hud.GetComponent<IGameplayEntity>();
-
-			_spawnerGameplayObjects = new List<IGameplayEntity>();
-			
-			foreach (var spawner in _enemySpawners)
-			{
-				_spawnerGameplayObjects.Add(spawner.GetComponent<IGameplayEntity>());
-			}
-			
-			_enemyGameplayObjects = new List<IGameplayEntity>();
-		}*/
 
 		private LevelStaticData LevelStaticData()
 			=> _staticDataService.ForLevel(SceneManager.GetActiveScene().name);

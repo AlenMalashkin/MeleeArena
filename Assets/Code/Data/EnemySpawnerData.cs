@@ -7,15 +7,11 @@ namespace Code.Data
 	[Serializable]
 	public class EnemySpawnerData
 	{
-		public EnemyType EnemyType;
 		public Vector3 Position;
-		public float TimeToRespawn;
 
-		public EnemySpawnerData(EnemyType type, Vector3 position, float timeToRespawn)
+		public EnemySpawnerData(Vector3 position)
 		{
-			EnemyType = type;
 			Position = position;
-			TimeToRespawn = timeToRespawn;
 		}
 	}
 }
