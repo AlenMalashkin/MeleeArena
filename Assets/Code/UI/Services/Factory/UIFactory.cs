@@ -1,16 +1,12 @@
 using System.Threading.Tasks;
 using Code.Data;
-using Code.Infrastructure;
 using Code.Infrastructure.Assets;
 using Code.Infrastructure.GameStates;
-using Code.Services.PersistentProgress;
-using Code.Services.SaveLoadService;
 using Code.Services.StaticData;
-using Code.UI.Services.WindowService;
 using Code.UI.Windows;
 using Code.UI.Windows.LoseWindow;
 using Code.UI.Windows.MenuWindow;
-using Code.UI.Windows.ShopWindow;
+using Code.UI.Windows.PauseWindow;
 using Code.UI.Windows.WinWindow;
 using UnityEngine;
 
@@ -21,16 +17,15 @@ namespace Code.UI.Services.Factory
 		private IGameStateMachine _gameStateMachine;
 		private IAssetProvider _assetProvider;
 		private IStaticDataService _staticDataService;
-		private LoadingCurtain.LoadingCurtain _loadingCurtain;
 		
 		private Transform _uiRoot;
 		
-		public UIFactory(IGameStateMachine gameStateMachine, IAssetProvider assetProvider, IStaticDataService staticDataService, LoadingCurtain.LoadingCurtain loadingCurtain)
+		public UIFactory(IGameStateMachine gameStateMachine, IAssetProvider assetProvider, 
+			IStaticDataService staticDataService)
 		{
 			_gameStateMachine = gameStateMachine;
 			_assetProvider = assetProvider;
 			_staticDataService = staticDataService;
-			_loadingCurtain = loadingCurtain;
 		}
 		
 		public void CreateLoseScreen()
@@ -58,6 +53,13 @@ namespace Code.UI.Services.Factory
 		{
 			WindowConfig config = _staticDataService.ForWindow(WindowType.Shop);
 			Object.Instantiate(config.WindowBase, _uiRoot);
+		}
+
+		public void CreatePauseWindow()
+		{
+			WindowConfig config = _staticDataService.ForWindow(WindowType.PauseWindow);
+			PauseWindow pauseWindow = Object.Instantiate(config.WindowBase, _uiRoot) as PauseWindow;
+			pauseWindow.Construct(_gameStateMachine);
 		}
 
 		public async Task CreateUIRoot()

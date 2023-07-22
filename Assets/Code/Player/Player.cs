@@ -17,7 +17,12 @@ namespace Code.Player
 			_gameResultReporterService = gameResultReporterService;
 			_gameResultReporterService.ResultsReported += OnResultsReported;
 		}
-		
+
+		private void OnDestroy()
+		{
+			_gameResultReporterService.ResultsReported -= OnResultsReported;
+		}
+
 		private void OnResultsReported(GameResults results)
 		{
 			if (results == GameResults.Win)

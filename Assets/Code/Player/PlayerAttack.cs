@@ -10,11 +10,18 @@ namespace Code.Player
 	{
 		[SerializeField] private PlayerAnimator animator;
 
-		public int Damage { get; set; }
+		private int _damage;
 
+		private PlayerSword _sword;
 		private IInputService _inputService;
 		private LayerMask _layerMask;
 		private Collider[] _hits = new Collider[3];
+
+		public void Construct(int damage, PlayerSword sword)
+		{
+			_damage = damage;
+			_sword = sword;
+		}
 		
 		private void Awake()
 		{
@@ -34,7 +41,11 @@ namespace Code.Player
 			for (int i = 0; i < Hit(); i++)
 			{
 				if (_hits[i].transform.parent.TryGetComponent(out IHealth health))
-					health?.TakeDamage(Damage);
+				{
+					health?.TakeDamage(_damage);
+					_sword.PlaySwordParticles();
+					_sword.PlaySwordHitSound();
+				}
 			}
 		}
 

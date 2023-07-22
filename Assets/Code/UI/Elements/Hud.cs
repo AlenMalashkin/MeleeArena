@@ -13,7 +13,12 @@ namespace Code.UI.Elements
 			_gameResultReporterService = gameResultReporterService;
 			_gameResultReporterService.ResultsReported += OnResultsReported;
 		}
-		
+
+		private void OnDestroy()
+		{
+			_gameResultReporterService.ResultsReported -= OnResultsReported;
+		}
+
 		private void OnResultsReported(GameResults results)
 		{
 			Destroy(gameObject);

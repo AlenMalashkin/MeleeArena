@@ -71,14 +71,14 @@ namespace Code.UI.Windows.ShopWindow
 		private void BougthUI()
 		{
 			UpdateButton(true);
-			UpdateText("Equip");
+			UpdateText("Выбрать");
 			UpdateImage(new Color(255, 255, 255, 255));
 		}
 
 		private void EquippedUI()
 		{
 			UpdateButton(false);
-			UpdateText("Equipped");
+			UpdateText("Выбрано");
 			UpdateImage(new Color(255, 255, 255, 150));
 		}
 	}

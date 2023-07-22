@@ -5,6 +5,7 @@ namespace Code.UI.Windows
 		MenuWindow,
 		LoseWindow,
 		WinWindow,
-		Shop
+		Shop,
+		PauseWindow
 	}
 }

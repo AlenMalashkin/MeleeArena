@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Code.Data;
 using Code.Enemy;
 using Code.Infrastructure.Assets;
+using Code.Infrastructure.GameStates;
 using Code.Logic;
 using Code.Logic.GameplayObjects;
 using Code.Logic.Spawners;
@@ -21,6 +22,7 @@ namespace Code.Infrastructure.Factory
 	public class GameFactory : IGameFactory
 	{
 		private IAssetProvider _assetProvider;
+		private IGameStateMachine _gameStateMachine;
 		private IStaticDataService _staticDataService;
 		private IPersistentProgressService _persistentProgressService;
 		private IKillCountService _killCountService;
@@ -29,11 +31,12 @@ namespace Code.Infrastructure.Factory
 		
 		private GameObject _playerGameObject;
 
-		public GameFactory(IAssetProvider assetProvider, IStaticDataService staticDataService, 
+		public GameFactory(IAssetProvider assetProvider, IGameStateMachine gameStateMachine, IStaticDataService staticDataService, 
 			IPersistentProgressService persistentProgressService, IKillCountService killCountService, 
 			IGameResultReporterService gameResultReporterService, IWaveService waveService)
 		{
 			_assetProvider = assetProvider;
+			_gameStateMachine = gameStateMachine;
 			_staticDataService = staticDataService;
 			_persistentProgressService = persistentProgressService;
 			_killCountService = killCountService;
@@ -44,7 +47,14 @@ namespace Code.Infrastructure.Factory
 		public async Task<GameObject> CreatePlayer(Vector3 at)
 		{
 			_playerGameObject = await _assetProvider.Instantiate(AssetAddress.PlayerPath, at);
+			
+			GameObject swordObject = await CreatePlayerSword(_playerGameObject.GetComponent<PlayerEquipment>().SwordSpawnPoint);
+			PlayerSword playerSword = swordObject.GetComponent<PlayerSword>();
+			
 			_playerGameObject.GetComponent<Player.Player>().Construct(_gameResultReporterService);
+			_playerGameObject.GetComponent<PlayerAttack>().Construct(_persistentProgressService.Progress.PlayerStats.Damage, playerSword);
+			_playerGameObject.GetComponent<PlayerDeath>().Construct(_gameStateMachine);
+			
 			return _playerGameObject;
 		}
 

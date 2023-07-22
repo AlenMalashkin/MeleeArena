@@ -23,15 +23,13 @@ namespace Code.Infrastructure.GameStates
 		private IGameFactory _gameFactory;
 		private IAssetProvider _assetProvider;
 		private IStaticDataService _staticDataService;
-		private IPersistentProgressService _persistentProgress;
 		private IUIFactory _uiFactory;
 
 		private GameObject _player;
 
 		public LoadLevelState(IGameStateMachine gameStateMachine, SceneLoader sceneLoader,
 			LoadingCurtain curtain, IGameFactory gameFactory, IAssetProvider assetProvider,
-			IStaticDataService staticDataService, IPersistentProgressService persistentProgress,
-			IUIFactory uiFactory)
+			IStaticDataService staticDataService, IUIFactory uiFactory)
 		{
 			_gameStateMachine = gameStateMachine;
 			_sceneLoader = sceneLoader;
@@ -39,7 +37,6 @@ namespace Code.Infrastructure.GameStates
 			_gameFactory = gameFactory;
 			_assetProvider = assetProvider;
 			_staticDataService = staticDataService;
-			_persistentProgress = persistentProgress;
 			_uiFactory = uiFactory;
 		}
 		
@@ -62,9 +59,6 @@ namespace Code.Infrastructure.GameStates
 		private async Task<GameObject> InitPlayer(Vector3 at)
 		{
 			GameObject player = await _gameFactory.CreatePlayer(at);
-			await _gameFactory.CreatePlayerSword(player.GetComponent<PlayerEquipment>().SwordSpawnPoint);
-			player.GetComponent<PlayerAttack>().Damage = _persistentProgress.Progress.PlayerStats.Damage;
-			player.GetComponent<PlayerDeath>().Construct(_gameStateMachine);
 			return player;
 		}
 
@@ -92,8 +86,8 @@ namespace Code.Infrastructure.GameStates
 			LevelStaticData levelStaticData = LevelStaticData();
 
 			_player = await InitPlayer(levelStaticData.PlayerPositionOnLevel);
-			await InitUIRoot();
 			await InitHud(_player);
+			await InitUIRoot();
 			await InitEnemySpawners(levelStaticData);
 			CameraFollow();
 		}

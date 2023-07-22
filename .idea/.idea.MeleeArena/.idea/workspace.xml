@@ -23,551 +23,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08e9403a-2e5a-45df-9d33-f9f0a15da49f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/PlayerStats.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/PlayerStats.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveSettings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveSettingsByWaveType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveSettingsByWaveType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveTypeByWave.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveTypeByWave.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Enemy/DropLoot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Enemy/DropLoot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/Loot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Logic/Loot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/Bank.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/Bank/Bank.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/Bank/Bank.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/Bank/IBank.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/Bank/IBank.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/WaveService.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/WaveService/IWaveService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/WaveService/IWaveService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/WaveService/WaveService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/WaveService/WaveService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/DisplayTargetKillCount.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/DisplayTargetKillCount.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/DisplayWaveTypeInTextField.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/DisplayWaveTypeInTextField.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/IUpdatableUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/IUpdatableUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/MoneyDisplayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/MoneyDisplayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/RewardAdShow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/RewardAdShow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ShopItemUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ShopItemUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/WinWindow.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/WinWindow/WinWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/WinWindow/WinWindow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerSword.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/SFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/SFX/MusicPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/SFX/MusicPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/SFX/SfxPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/SFX/SfxPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/Pause.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/Pause.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/PauseWindow.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/PauseWindow/PauseWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/PauseWindow/PauseWindow.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MeleeArena/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MeleeArena/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MeleeArena/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MeleeArena/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/EnemySpawnerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/EnemySpawnerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/ItemAddressByType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/ItemAddressByType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/ItemData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/PlayerProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/PlayerProgress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Editor/LevelStaticDataEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Editor/LevelStaticDataEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Editor/MarkerGizmos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Editor/MarkerGizmos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyDeath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Enemy/StopEnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enemy/StopEnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/Assets/AssetAddress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Assets/AssetAddress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/Bootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Bootstrapper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/Factory/IGameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Factory/IGameFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/BootstrapState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameOverState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameOverState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameStateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/LoadLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/LoadLevelState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/Loot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/Loot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/GameOverReporterService/GameResultReporterService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/GameOverReporterService/GameResultReporterService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/Input/DesctopInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/Input/DesctopInputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/Input/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/Input/InputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/Input/MobileInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/Input/MobileInputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/KillCountService/KillCountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/KillCountService/KillCountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/StaticData/ItemStaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/StaticData/ItemStaticData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerDeath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Elements/Hud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Elements/Hud.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/IUIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/IUIFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/UIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/UIFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Services/WindowService/WindowService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Services/WindowService/WindowService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/LoseWindow/LoseWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/LoseWindow/LoseWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/MenuWindow/MenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/MenuWindow/MenuWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ItemType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ShopItemBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ShopItemBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/SwordItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/SwordItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/ShopWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/ShopWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ShopItemUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ShopItemUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Enemies/Death.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Enemies/Death.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Enemies/EnemyAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Enemies/EnemyAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Enemies/Victory.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Enemies/Victory.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemies/BaseEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Enemies/BaseEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/HUD.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/blue.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/blue.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/gold.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/gold.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/green.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/green.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/purple.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/purple.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/red.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Enemies/red.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StaticData/Items/ItemsStaticData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StaticData/Items/ItemsStaticData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/StaticData/Levels/MainLevelStaticData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StaticData/Levels/MainLevelStaticData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemies/Loot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Enemies/Loot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Infrastructure/Bootstrapper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Infrastructure/Bootstrapper.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/StaticData/Windows/WindowStaticData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StaticData/Windows/WindowStaticData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/In-game.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword10_Bone.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword10_Bone.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword10_Brown.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword10_Brown.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword10_Dark.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword10_Dark.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword11_Blood.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword11_Blood.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword11_Bone.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword11_Bone.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword11_Dark.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword11_Dark.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword12_Green.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword12_Green.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword12_Purple.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword12_Purple.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword12_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword12_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Cyan.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Cyan.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Green.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Green.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Orange.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Orange.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword13_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword14_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword14_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword14_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword14_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword14_Yellow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword14_Yellow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword15_Earth.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword15_Earth.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword15_Frost.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword15_Frost.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword15_Iron.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword15_Iron.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword15_Lava.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword15_Lava.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword1_Gold.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword1_Gold.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword2_Green.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword2_Green.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword2_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword2_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword2_Yellow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword2_Yellow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword3_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword3_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword3_Green.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword3_Green.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword3_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword3_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword4_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword4_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword4_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword4_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword4_Yellow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword4_Yellow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword5_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword5_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword5_Gold.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword5_Gold.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword5_Yellow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword5_Yellow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword6_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword6_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword6_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword6_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword6_Yellow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword6_Yellow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword7_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword7_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword7_Green.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword7_Green.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword7_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword7_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword8_Corrupted.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword8_Corrupted.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword8_Gold.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword8_Gold.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword8_White.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword8_White.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_Green.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_Green.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_Purple.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_Purple.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_Red.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_Red.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_White.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Prefabs/Sword9_White.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Sword1_Material_Gold.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Sword1_Material_Gold.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Albedo_Bronze.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Albedo_Bronze.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Albedo_Gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Albedo_Gold.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Albedo_Silver.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Albedo_Silver.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Emission.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Emission.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Metallic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Metallic.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword1/Textures/Sword1_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Sword10_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Sword10_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Sword10_Material_Bone.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Sword10_Material_Bone.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Sword10_Material_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Sword10_Material_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Sword10_Material_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Sword10_Material_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Albedo_Bone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Albedo_Bone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Albedo_Brown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Albedo_Brown.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Albedo_Dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Albedo_Dark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Metallic_Bone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Metallic_Bone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Metallic_Brown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Metallic_Brown.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Metallic_Dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Metallic_Dark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Normal_Bone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Normal_Bone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Normal_Brown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Normal_Brown.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Normal_Dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword10/Textures/Sword10_Normal_Dark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Sword11_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Sword11_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Sword11_Material_Blood.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Sword11_Material_Blood.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Sword11_Material_Bone.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Sword11_Material_Bone.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Sword11_Material_Dark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Sword11_Material_Dark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Albedo_Blood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Albedo_Blood.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Albedo_Bone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Albedo_Bone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Albedo_Dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Albedo_Dark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Emission_Blood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Emission_Blood.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Metallic_Blood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Metallic_Blood.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Metallic_Bone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Metallic_Bone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Metallic_Dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Metallic_Dark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Normal_Blood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Normal_Blood.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Normal_Bone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Normal_Bone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Normal_Dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword11/Textures/Sword11_Normal_Dark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Sword12_FBX.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Sword12_FBX.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Sword12_Material_Purple.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Sword12_Material_Purple.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Sword12_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Sword12_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Albedo_Green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Albedo_Green.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Albedo_Purple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Albedo_Purple.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Emission.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Emission.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Metallic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Metallic.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword12/Textures/Sword12_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Cyan.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Cyan.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Orange.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Orange.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Sword13_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Cyan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Cyan.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Green.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Orange.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Orange.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword13/Textures/Sword13_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Sword14_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Sword14_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Sword14_Material_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Sword14_Material_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Sword14_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Sword14_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Sword14_Material_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Sword14_Material_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Albedo_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Albedo_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Albedo_Yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Albedo_Yellow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword14/Textures/Sword14_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Sword15_FBX.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Sword15_FBX.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Sword15_Material_Earth.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Sword15_Material_Earth.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Sword15_Material_Iron.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Sword15_Material_Iron.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Albedo_Earth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Albedo_Earth.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Albedo_Frost.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Albedo_Frost.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Albedo_Iron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Albedo_Iron.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Albedo_Lava.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Albedo_Lava.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Emission_Earth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Emission_Earth.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Emission_Frost.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Emission_Frost.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Emission_Iron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Emission_Iron.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Emission_Lava.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Emission_Lava.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Metallic_Earth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Metallic_Earth.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Metallic_Frost.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Metallic_Frost.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Metallic_Iron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Metallic_Iron.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Metallic_Lava.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Metallic_Lava.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Normal_Earth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Normal_Earth.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Normal_Frost.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Normal_Frost.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Normal_Iron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Normal_Iron.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Normal_Lava.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword15/Textures/Sword15_Normal_Lava.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Sword2_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Sword2_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Sword2_Material_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Sword2_Material_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Sword2_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Sword2_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Sword2_Material_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Sword2_Material_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Albedo_Green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Albedo_Green.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Albedo_Yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Albedo_Yellow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword2/Textures/Sword2_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Sword3_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Sword3_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Sword3_Material_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Sword3_Material_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Sword3_Material_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Sword3_Material_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Sword3_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Sword3_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Albedo_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Albedo_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Albedo_Green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Albedo_Green.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword3/Textures/Sword3_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Sword4_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Sword4_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Sword4_Material_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Sword4_Material_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Sword4_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Sword4_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Sword4_Material_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Sword4_Material_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Albedo_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Albedo_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Albedo_Yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Albedo_Yellow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword4/Textures/Sword4_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Sword5_Material_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Sword5_Material_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Sword5_Material_Gold.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Sword5_Material_Gold.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Sword5_Material_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Sword5_Material_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Albedo_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Albedo_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Albedo_Gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Albedo_Gold.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Albedo_Red.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Albedo_Red.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Albedo_Yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Albedo_Yellow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Metallic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Metallic.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Swords/Sword5/Textures/Sword5_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Sword6_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Sword6_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Sword6_Material_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Sword6_Material_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Sword6_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Sword6_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Sword6_Material_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Sword6_Material_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Albedo_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Albedo_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Albedo_Yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Albedo_Yellow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword6/Textures/Sword6_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Sword7_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Sword7_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Sword7_Material_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Sword7_Material_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Sword7_Material_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Sword7_Material_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Sword7_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Sword7_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Albedo_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Albedo_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Albedo_Green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Albedo_Green.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword7/Textures/Sword7_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Sword8_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Sword8_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Sword8_Material_Corrupted.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Sword8_Material_Corrupted.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Sword8_Material_Gold.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Sword8_Material_Gold.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Sword8_Material_White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Sword8_Material_White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Albedo_Corrupted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Albedo_Corrupted.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Albedo_Gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Albedo_Gold.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Albedo_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Albedo_White.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Metallic_Corrupted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Metallic_Corrupted.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Metallic_Gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Metallic_Gold.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Metallic_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Metallic_White.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Normal_Corrupted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Normal_Corrupted.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Normal_Gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Normal_Gold.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Normal_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword8/Textures/Sword8_Normal_White.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_FBX.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_FBX.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_Purple.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_Purple.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Sword9_Material_White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_Green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_Green.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_Purple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_Purple.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Albedo_White.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Swords/Sword9/Textures/Sword9_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Windows/LoseWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Windows/LoseWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Windows/MenuWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Windows/MenuWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Windows/Shop/Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Windows/Shop/Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/LoadingCurtain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/LoadingCurtain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/MoneyDisplayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/MoneyDisplayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Windows/Shop/ShopWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Windows/Shop/ShopWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Enemies/DefaultEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Enemies/DefaultEnemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/HUD/Hud.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/HUD/Hud.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScenePrefabs/EnemySpawnMarker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScenePrefabs/EnemySpawnMarker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword12_Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword12_Green.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword15_Frost.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword15_Frost.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword15_Lava.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword15_Lava.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword1_Bronze.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword1_Bronze.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword1_Silver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword1_Silver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword5_Red.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources_moved/Swords/In-game/Sword5_Red.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -580,63 +82,65 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/K-Syndicate-study-project-main/Assets/CodeBase/Data/LootPieceDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/K-Syndicate-study-project-main/Assets/CodeBase/Data/SerializableDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/97/164a7a8b/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/TestRun/Tasks/LegacyPlayerRunTask.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Player/PlayerSword.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawnMarker.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/StaticData/ItemStaticData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Data/ItemData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/StaticData/WaveStaticData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Data/WaveSerializableDictionary.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/StaticData/WavesStaticData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Data/EnemyTypeByWave.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Data/WaveSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Editor/LevelStaticDataEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawnMarker.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Editor/MarkerGizmos.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Services/GameOverReporterService/GameResultReporterService.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Services/WaveService/IWaveService.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Services/WaveService/WaveService.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemy/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/Hud.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyType.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemy/DropLoot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Logic/Loot.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/WaveSettingsByWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/WaveType.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/WaveSettingsByWaveType.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/WaveTypeByWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/LoseWindow/LoseWindow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/IUIFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/UIFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/WinWindow/WinWindow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/WindowService/WindowService.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameOverState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ItemType.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/ItemAddressByType.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/Assets/AssetAddress.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ShopItemUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Services/Input/InputService.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Services/Input/MobileInputService.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Services/Input/DesctopInputService.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/SceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/MenuWindow/MenuWindow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/BootstrapState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/Waves/WaveSettingsByWaveType.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/DisplayTargetKillCount.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/DisplayWaveTypeInTextField.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyDeath.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemy/StopMovementOnVictory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemy/StopEnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/RewardAdShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/GameStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/ShopWindow/Items/ShopItemUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SFX/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SFX/SfxPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/Bootstrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerSword.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemy/EnemyDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/WindowType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/IUIFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/WindowService/WindowService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Services/Factory/UIFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Windows/PauseWindow/PauseWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/Pause.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Infrastructure/GameStates/LoadLevelState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/Loot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Logic/Spawners/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/Elements/Hud.cs" />
       </list>
     </option>
   </component>
@@ -711,6 +215,10 @@
       <workItem from="1689868869814" duration="1188000" />
       <workItem from="1689882679067" duration="1330000" />
       <workItem from="1689923150581" duration="5987000" />
+      <workItem from="1689949535409" duration="1821000" />
+      <workItem from="1689960437899" duration="1240000" />
+      <workItem from="1689964801915" duration="265000" />
+      <workItem from="1690008233924" duration="7881000" />
     </task>
     <servers />
   </component>
@@ -757,10 +265,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1689226488757" />
-    <state x="539" y="220" width="840" height="774" key="search.everywhere.popup" timestamp="1689926568572">
+    <state x="539" y="220" width="840" height="774" key="search.everywhere.popup" timestamp="1690023363418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="431" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1536.912@0.0.1536.912" timestamp="1688892262892" />
-    <state x="539" y="220" width="840" height="774" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1689926568572" />
+    <state x="539" y="220" width="840" height="774" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1690023363418" />
   </component>
 </project>

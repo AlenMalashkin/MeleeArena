@@ -21,3 +21,5 @@ MonoBehaviour:
     WindowBase: {fileID: -3166147078714434018, guid: 18a5b60c72e899c4f80630e31ecf1b2c, type: 3}
   - Type: 2
     WindowBase: {fileID: 6562519139888792252, guid: 99b03edc788e0b04a8241b8159e7b60f, type: 3}
+  - Type: 4
+    WindowBase: {fileID: 937150109798106628, guid: 3e397e2bf195eee4fa6457badbb06e82, type: 3}

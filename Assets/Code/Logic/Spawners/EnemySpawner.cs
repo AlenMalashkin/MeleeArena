@@ -1,3 +1,4 @@
+using System;
 using Code.Enemy;
 using Code.Infrastructure.Factory;
 using Code.Services.GameOverReporterService;
@@ -27,6 +28,13 @@ namespace Code.Logic.Spawners
             _gameResultReporterService = gameResultReporterService;
             _gameResultReporterService.ResultsReported += OnResultsReported;
             _timer.TimerFinished += Spawn;
+        }
+
+        private void OnDestroy()
+        {
+            _gameResultReporterService.ResultsReported -= OnResultsReported;
+            _timer.TimerFinished -= Spawn;
+            _timer.Stop();
         }
 
         private void OnResultsReported(GameResults results)

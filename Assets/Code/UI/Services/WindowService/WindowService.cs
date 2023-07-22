@@ -20,11 +20,14 @@ namespace Code.UI.Services.WindowService
 				case WindowType.LoseWindow :
 					_uiFactory.CreateLoseScreen();
 					break;
-				case WindowType.WinWindow:
+				case WindowType.WinWindow :
 					_uiFactory.CreateWinScreen();
 					break;
 				case WindowType.Shop :
 					_uiFactory.CreateShop();
+					break;
+				case WindowType.PauseWindow :
+					_uiFactory.CreatePauseWindow();
 					break;
 				default:
 					throw new ArgumentOutOfRangeException(nameof(type), type, null);

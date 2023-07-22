@@ -1,4 +1,5 @@
 using System;
+using Code.SFX;
 using Code.UI.Elements;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,8 +10,11 @@ namespace Code.Enemy
 	public class EnemyDeath : MonoBehaviour
 	{
 		public event Action EnemyDied;
-		
+
 		[SerializeField] private EnemyAnimator animator;
+		[SerializeField] private ParticleSystem deathParticles;
+		[SerializeField] private SfxPlayer sfxPlayer;
+		[SerializeField] private AudioClip deathSound;
 		[SerializeField] private ActorUI actorUI;
 		[SerializeField] private HpBar hpBar;
 		[SerializeField] private EnemyHealth enemyHealth;
@@ -40,6 +44,9 @@ namespace Code.Enemy
 		private void Die()
 		{
 			animator.PlayDie();
+			deathParticles.gameObject.SetActive(true);
+			deathParticles.Play();
+			sfxPlayer.PlaySfx(deathSound);
 			EnemyDied?.Invoke();
 			Destroy(gameObject, 3);
 		}

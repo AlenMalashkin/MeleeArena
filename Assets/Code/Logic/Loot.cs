@@ -32,7 +32,6 @@ namespace Code.Enemy
 				return;
 			
 			_bank.GetMoney(_reward);
-			Debug.Log(_bank.Money);
 			Destroy(gameObject);
 		}
 	}

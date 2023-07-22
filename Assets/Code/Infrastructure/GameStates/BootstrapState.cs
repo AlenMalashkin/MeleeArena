@@ -62,6 +62,7 @@ namespace Code.Infrastructure.GameStates
 			_serviceLocator.RegisterService<IGameResultReporterService>(new GameResultReporterService(_serviceLocator.Resolve<IWaveService>()));
 			_serviceLocator.RegisterService<IGameFactory>(new GameFactory(
 				_serviceLocator.Resolve<IAssetProvider>(),
+				_gameStateMachine,
 				_serviceLocator.Resolve<IStaticDataService>(),
 				_serviceLocator.Resolve<IPersistentProgressService>(),
 				_serviceLocator.Resolve<IKillCountService>(), 
@@ -72,8 +73,7 @@ namespace Code.Infrastructure.GameStates
 			(
 				_serviceLocator.Resolve<IGameStateMachine>(),
 				_serviceLocator.Resolve<IAssetProvider>(),
-				_serviceLocator.Resolve<IStaticDataService>(),
-				_loadingCurtain
+				_serviceLocator.Resolve<IStaticDataService>()
 			));
 			_serviceLocator.RegisterService<IWindowService>(new WindowService(_serviceLocator.Resolve<IUIFactory>()));
 		}

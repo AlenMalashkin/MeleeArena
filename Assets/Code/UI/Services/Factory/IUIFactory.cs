@@ -9,6 +9,7 @@ namespace Code.UI.Services.Factory
 		void CreateWinScreen();
 		void CreateMenu();
 		void CreateShop();
+		void CreatePauseWindow();
 		Task CreateUIRoot();
 	}
 }
